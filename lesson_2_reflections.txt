@@ -1,0 +1,16 @@
+Reflect: Initializing a Repository
+
+Q: What happens when you initialize a repository? Why do you need to do it?
+A: Initializing a repo does 2 things:
+
+    1. Git creates a hidden directory ".git" which contains meta info for
+       helping git to track those file, view logs, commit changes etc.
+
+    2. Git is able to track your files, which later wasn't the case!
+
+
+Q: Why do you need to do it?
+A: For git to track the files, it need a staging area where it could, hence
+   we do it.
+
+  

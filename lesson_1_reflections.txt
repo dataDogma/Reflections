@@ -1,0 +1,141 @@
+How did viewing a diff between two versions of a file help you see the bug that was introduced?
+    Typo's get exposed, differences get's highlighted!
+    for a large file, this is easier way of doing things.
+
+How could having easy access to the entire history of a file make you a more efficient programmer in the long term?
+    File system history tell what changes were made and at what time or
+    who made those changes.
+
+As a programmer, when would you want to have a version of your code saved/
+    > At regular intervals, in finite time domain(say, every hour), but it has some issues,
+      First, very few lines of code doesn't display the logic, further making multiple version in short amount of time.
+      Second, It doesn't make sense to why version be made after a long change is made, say we
+      have a optimized code that is of few line, in the sense the VCS won't bother to make versions, this can be bad!
+      Third,
+      Fourth, Saving manually is highly error prone, not to mention we(humans)
+      can loose track of time. But it's
+      much more flexible as well!
+
+Manual Commits
+
+
+if you were to put "git diff" on the map, which of the following existing
+concepts would you directly connect it with.
+
+note: remember that we want to avoid cluttering up our map, so try to add only
+"relationships" that would not be implied by other relationships already on the map.
+
+    > "git diff" operates on commits!
+
+
+How Often to Commit
+
+    > Keep commits small if necessary.
+    > As the diff's b/w 2 files get's bigger, it's harder to keep track of changes.
+        > making it less useful
+    > Making commits too often will clutter the "history"!
+    > Good rule of thumb is to make "one commit per logical change".
+    > Git allows you to write a short message explaining the purpose of the commit.
+
+
+Commit Size Quiz
+
+Reflect: Manual Commit
+
+What do you think are the pros and cons of manually choosing when to create a commit,
+like you do in Git, vs having versions automatically saved, like Google Docs does?
+
+> Manual commit offers lot more of flexibility.
+> Manual commits can be evaluated on educated guesses.
+> one commit per logic is nice form of protocol to follow.
+
+cons:
+    > Subjective form person to person.
+    > Can loose track of commits
+    > Can commit too often, cluttering the commit history and logs.
+    > Automated saves don't follow "one commit per logic" protocols
+
+
+Reflect: Multi-file commit
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+> Being able to handle commits for multiple files is flexible, it's less tedious
+  job to keep track of multiple changes at once, whereas there might be some
+  areas where each file has a specific commit.
+
+
+  Concept Map
+
+  Git
+
+    > Repository : part-of
+
+        > Commit : part-of
+
+        > Clone : part-of
+
+            > log : operates-on
+
+            > clone operates-on
+
+
+Git Errors and Warnings Solution
+
+Should not be doing an octopus
+    Octopus is a strategy Git uses to combine many different versions of code
+    together. This message can appear if you try to use this strategy in an
+    inappropriate situation.
+
+You are in 'detached HEAD' state
+    HEAD is what Git calls the commit you are currently on. You can “detach” the
+    HEAD by switching to a previous commit, which we’ll see in the next video.
+    Despite what it sounds like, it’s actually not a bad thing to detach the HEAD.
+    Git just warns you so that you’ll realize you’re doing it.
+
+Panic! (the 'impossible' happened)
+    This is a real error message, but it’s not output by Git. Instead it’s
+    output by GHC, the compiler for a programming language called Haskell.
+    It’s reserved for particularly surprising errors!
+
+
+Reflect: Confidence from Version Control
+
+# How might using version control make you more confident to make changes that
+  could break something?
+
+  > we can revert back to commits made using "git checkout", so even if we made
+    some errors in our code, we can go back and fix it.
+
+  > If we want to dig in deeper, we can compare two commits to see what break'd
+    the code!
+
+Reflect: How do you want to use Git?
+
+# Now that you have your workspace set up, what do you want to try using Git for?
+
+  > Getting more control on my project work.
+  > More flexibility in terms of code quality.
+  > Fixing breaks in the project.
+
+  #Lesson 1: Quiz#
+
+  Git command review
+
+  1. Compare two commits, printing each line that is present in one commit but not the other.
+
+  git diff will do this. It takes two arguments - the two commit ids to compare,
+  starting with "original/old" commit than followed by "new" commit.
+
+  2. Make a copy of an entire Git repository, including the history, onto your own computer.
+
+  git clone will do this. It takes one argument - the url of the repository to copy.
+
+  3. Temporarily reset all files in a directory to their state at the time of a specific commit.
+
+  git checkout will do this. It takes one argument - the commit ID to restore.
+
+  4. Show the commits made in this repository, starting with the most recent.
+
+  git log will do this. It doesn't take any arguments.
