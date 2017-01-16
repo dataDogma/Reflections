@@ -13,4 +13,30 @@ Q: Why do you need to do it?
 A: For git to track the files, it need a staging area where it could, hence
    we do it.
 
-  
+ Q: What happens when you initialize a repository? Why do you need to do it?
+ A:
+
+Q: How is the staging area different from the working directory and the repository?
+   What value do you think it offers?
+
+A: Staging area bundles the commits into one single commit.
+Q: It's an intermediate stage, where we can review the commits before making
+   as permanent commits. In terms of value, staging area prepares the commits
+   before it get's permanent, so if we want to reset changes we can do so.
+   by not adding the files to commit.
+
+   We can reset: "git reset file_name"  
+
+   How can you use the staging area to make sure you have one commit per logical
+   change?
+
+   What are some situations when branches would be helpful in keeping your history
+   organized? How would branches help?
+
+   How do the diagrams help you visualize the branch structure?
+
+   What is the result of merging two branches together? Why do we represent it in
+   the diagram the way we do?
+
+   What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+   manually?
