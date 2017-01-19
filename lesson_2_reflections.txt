@@ -27,16 +27,52 @@ Q: It's an intermediate stage, where we can review the commits before making
 
    We can reset: "git reset file_name"
 
-   How can you use the staging area to make sure you have one commit per logical
+ Q: How can you use the staging area to make sure you have one commit per logical
    change?
+ A: Staging area bundles multiple commits into single commit into git repo.
+    The key concept over here is to add a single file to staging area than commit
+    it as one commit per logical change. Repeat the process until you are done.
 
-   What are some situations when branches would be helpful in keeping your history
+
+ Q: What are some situations when branches would be helpful in keeping your history
    organized? How would branches help?
+ A: Branching allows to test or experiment things before officially committing to
+    a major change in our code base, it allows us to switch context in our project.
 
-   How do the diagrams help you visualize the branch structure?
+    - Git branching helps us to organize our code repository if we are sharing our
+    work into public.
+    - nightly builds often use branching methods to test out experimental features
+      into software's or app's as new features, if the public approves, merge it
+      to master branch.
+    - It allows us to compartmentalize our work.
 
+Q: How do the diagrams help you visualize the branch structure?
+A: Diagrams gives a pictorial representation of the version-control tree, it's
+   like tracing an entire tree structure to our commits and branches.
+
+   It helps us to keep a visual track of what branches we have, where our head
+   is pointing to a recent commit, and are there any untracked commits.
    What is the result of merging two branches together? Why do we represent it in
    the diagram the way we do?
 
-   What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+Q: What are the pros and cons of Git's automatic merging vs. always doing merges
    manually?
+A: Auto merging is a handy way to let Git do the heavy lifting for you, which
+   would involve merging branches, creating a new commit(branch), deleting the
+   merged branch into an existing master branch and finally if there were
+   conflicts, than give feedback to the expert.
+
+   Manual merging is flexible but quite tedious, further keeping track of
+   conflicts is cumbersome and can lead to unnecessary changes that the expert
+   might not know!
+
+Q: What is the result of merging two branches together? Why do we represent it in
+   the diagram the way we do?
+
+A: The result of merging two branches together is to make the commits from one
+    branch merge into the existing branch recursively added. This has several
+    applications for e.g. An experimental feature was desirable into current
+    feature list etc.
+
+    We represent it in the diagram to keep track of the head and the labels of
+    the merged branches.
