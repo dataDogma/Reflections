@@ -1,7 +1,7 @@
 Q1: When would you want to create a remote repository rather than keeping all your work local?
 A: Remote repositories are by definition exist as repository created remotely, thus if someone wants to share his/her work or contribute to some
    someone's else work than the idea of remote repository works pretty fine.
-
+=============
 Q2: Why might you want to always pull changes manually rather than having Git
     automatically stay up-to-date with you remote repository?
 A: [Manual Pulling]:
@@ -17,5 +17,17 @@ A: [Manual Pulling]:
        content being pulled by anyone.
     2. Often it pulls several commits(say an entire branch) which might lead to
        conflicts.
+=============
+Q3: Describe the differences between forks, clones, and branches. When would you
+    use one instead of another?
 
-       
+A:
+=============
+Q4: What is the benefit of having a copy of the last known state of the remote
+branch?
+A: Following are the benefits:
+    1. A copy is form of backup of your work, so if the state of the original is
+       changed at original, the changes can be reverted back.
+    2. The work remains updated rather than out-of-sync.
+    3. If the changes made at remote by someone is undesirable than those changes
+       can be managed and resolved via the copy at origin/master or vice-versa.
